@@ -1,7 +1,11 @@
 import React from 'react'
 import "./CSS/Nav.css"
-export default function Nav() {
-  return (
+//import {Link} from 'react-router-dom'
+
+const Nav=()=>{
+  return(
+
+
     <div>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container">
@@ -50,5 +54,11 @@ export default function Nav() {
   </div>
 </nav>
     </div>
-  )
+
+
+
+
+  );
 }
+
+export default Nav;

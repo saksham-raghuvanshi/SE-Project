@@ -3,6 +3,46 @@ Nav ul{
 }
 
 
+.jumbotron #aboutus{
+    background-color: aliceblue;
+    
+    align-content: center;
+    padding-top:20px ;
+    padding-bottom: 2%;
+}
 
+.jumbotron button{
+    padding: top 10px;;
+}
+
+.jumbotron .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: aliceblue;
+    border-color: #285e8e;    
+    color:black;
+}
+
+#Achievements{
+    background-color: aliceblue;
+    
+    
+}
+
+
+#News{
+    background: #e0dddd;
+    width: 100%;}
+.news-scroll a{text-decoration: none;
+}
+.dot{height: 6px;width: 20%;margin-left: 3px;margin-right: 3px;margin-top: 2px !important;background-color: rgb(207,23,23);border-radius: 50%;display: inline-block}
+
+div #btn1{
+    padding-right: 1%;
+}
+
+
+div .card .img-fluid{
+    height:300px;
+}
 
 
