@@ -2,7 +2,7 @@
 import './App.css';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+import Header from "./components/header";
 import Jumbotron from "./components/Jumbotron";
 import News from "./components/News";
 import Achievements from './components/Achievements';
