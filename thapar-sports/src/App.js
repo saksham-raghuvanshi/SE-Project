@@ -3,20 +3,12 @@ import './App.css';
 import Nav from "./components/Nav";
 import Home from './components/Home';
 import Footer from "./components/Footer";
-
-
-
-
 import Faculty from './components/Faculty'
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-
-
-
-
 function App() {
 
  
