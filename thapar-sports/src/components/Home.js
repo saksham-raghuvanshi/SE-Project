@@ -1,9 +1,58 @@
 import React from 'react'
+import cover_image from '../cover_image.jpg'
+import photo_2 from '../photo_2.webp'
+import photo_5 from '../photo_5.webp'
 
-export default function Achievements() {
+
+export default function Home() {
   return (
+    
+    <div>
+    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+ <div className=" carousel-inner ">
+   <div className="carousel-item active">
+     <img src={cover_image} className="d-block w-100" alt="..."/>
+   </div>
+   <div className="carousel-item">
+     <img src={photo_2} className="d-block w-100" alt="..."/>
+   </div>
+   <div className="carousel-item">
+     <img src={photo_5} className="d-block w-100" alt="..."/>
+   </div>
+ </div>
+ <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+   <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+   <span className="visually-hidden">Previous</span>
+ </button>
+ <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+   <span className="carousel-control-next-icon" aria-hidden="true"></span>
+   <span className="visually-hidden">Next</span>
+ </button>
+</div>
 
-    <div class="container-fluid" id="Achievements">
+<div class="jumbotron text-center">
+                <div id="aboutus"><h1>About us</h1>
+                <p>Stay updated with the latest sports events and announcements, book your swimming entries, and issue sports equipment all in one place
+                </p>
+                <button class="btn btn-primary">Read More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+</svg></button></div>
+            </div>
+
+            <div class="container-fluid mt-1" id="News">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+                <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news"><span class="d-flex align-items-center">&nbsp;Thapar Sports News</span></div>
+                <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a> <span class="dot"></span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </a> <span class="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a>
+                </marquee>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid" id="Achievements">
        <section class="pt-5 pb-5">
     <div class="container-fluid">
         <div class="row">
@@ -106,5 +155,9 @@ export default function Achievements() {
 </section>
         
     </div>
-     )
+
+
+   </div>
+    
+  )
 }
