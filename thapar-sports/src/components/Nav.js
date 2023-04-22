@@ -7,7 +7,7 @@ const Nav = () =>{
     <div>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
 <div className="container">
-  <Link id="brand" className="navbar-brand" to="#"><img src="https://www.thapar.edu/images/logo.png" alt="Thapr-sports"></img></Link>
+  <Link id="brand" className="navbar-brand" to="/"><img src="https://www.thapar.edu/images/logo.png" alt="Thapr-sports"></img></Link>
   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
