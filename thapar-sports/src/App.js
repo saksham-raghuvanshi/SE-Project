@@ -3,7 +3,8 @@ import './App.css';
 import Nav from "./components/Nav";
 import Home from './components/Home';
 import Footer from "./components/Footer";
-import Faculty from './components/Faculty'
+import Faculty from './components/Faculty';
+import Achievements from './components/Achieve';
 import {
   BrowserRouter as Router,
   Routes,
@@ -31,6 +32,9 @@ function App() {
         </Route>
         <Route exact path="/faculty" element={<Faculty/>} >
         </Route>
+        <Route exact path="/achievements" element={<Achievements/>} >
+        </Route>
+
        </Routes>
 
     </Router>
