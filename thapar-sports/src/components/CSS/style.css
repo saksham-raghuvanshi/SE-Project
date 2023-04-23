@@ -322,3 +322,63 @@ div #coach{
   transform: translate(-50%, -50%);
   font-size:4rem;
 }
+
+
+#synthetic{
+  width: 100%;
+  height: 500px;
+}
+#centeredabout{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:aliceblue;
+  font-family: 'Bruno Ace SC', cursive;
+  font-size: 121px;
+}
+#description{
+  margin-top: 50px;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px;
+}
+#photo_track{
+  width: 500px;
+  height: 200px;
+  
+  border: 1px;
+  border-radius: 4%;
+}
+#photo_ground{
+  width: 500px;
+  border: 1px;
+  border-radius: 4%;
+}
+#photo_boyz{
+  width: 500px;
+  border: 1px;
+  border-radius: 4%;
+}
+#photo_thpp{
+  width: 500px;
+  border: 1px;
+  border-radius: 4%;
+}
+#msg{
+  width: 500px;
+  border: 2px;
+  border-radius: 4%;
+}
+#admin_msg{
+  font-size: 22px;
+}
+#mcbc{
+  border: 2px;
+  background-color: darkcyan;
+  color: whitesmoke;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

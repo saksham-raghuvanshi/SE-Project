@@ -2,9 +2,10 @@
 import './App.css';
 import Nav from "./components/Nav";
 import Home from './components/Home';
-import Footer from "./components/Footer";
 import Faculty from './components/Faculty';
 import Achievements from './components/Achieve';
+import Aboutus from "./components/Aboutus";
+import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
   Routes,
@@ -29,6 +30,8 @@ function App() {
        
        <Routes>
        <Route exact path="/" element={<Home/>} >
+        </Route>
+        <Route exact path="/about-us" element={<Aboutus/>} >
         </Route>
         <Route exact path="/faculty" element={<Faculty/>} >
         </Route>
