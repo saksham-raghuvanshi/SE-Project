@@ -400,4 +400,13 @@ text-align: left;
 .table{
 text-align: left;
 margin-top: 3%;
+
 }
+
+#Login{
+background-color: #508bfc;
+}
+#logincard{
+  border-radius: 1rem;
+}
+

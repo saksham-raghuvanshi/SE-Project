@@ -41,6 +41,7 @@ const Nav = () =>{
 
       <li className="nav-item">
         <Link className="nav-link" data-toggle="modal" data-target="#modalLoginForm"><i className="fa-solid fa-user"></i></Link>
+        {/* <Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link> */}
 
         {/* <div className="text-center">
 <Link to="" className="btn btn-default btn-rounded mb-4"  >Launch
@@ -69,23 +70,24 @@ aria-hidden="true">
       </button>
     </div>
     <div className="modal-body mx-3">
-      <div className="md-form mb-5">
-        <i className="fas fa-user prefix grey-text"></i>
-        <label data-error="wrong" data-success="right" for="defaultForm-number">Your Rollno</label>
-        <input placeholder="Enter Your Rollno" type="number" id="defaultForm-number" className="form-control validate"/>
-        
-      </div>
+    <div class="form-outline mb-4">
+              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+              <label class="form-label" for="typeEmailX-2">Email</label>
+            </div>
 
-      <div className="md-form mb-4">
-        <i className="fas fa-lock prefix grey-text"></i>
-        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
-        <input placeholder="Enter Your Password" type="password" id="defaultForm-pass" className="form-control validate"/>
-        
-      </div>
+    <div class="form-outline mb-4">
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+              <label class="form-label" for="typePasswordX-2">Password</label>
+    </div>
+
+    <div class="form-check d-flex justify-content-start mb-4">
+              <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+              <label class="form-check-label" for="form1Example3"> Remember password </label>
+    </div>
 
     </div>
     <div className="modal-footer d-flex justify-content-center">
-      <button className="btn btn-primary">Login</button>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
     </div>
   </div>
 </div>

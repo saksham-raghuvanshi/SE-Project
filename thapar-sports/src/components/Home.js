@@ -4,7 +4,7 @@ import photo_2 from '../photo_2.webp'
 import photo_5 from '../photo_5.webp'
 import coachi from "../img/coachi.jpg";
 import Badminton from "../img/badminton.jpg";
-import Football from "../img/Football.avif";
+import Football from "../img/Football1.png";
 import Tennis from "../img/Tennis.jpg";
 import Cricket from "../img/batball.jpg";
 
@@ -54,7 +54,7 @@ export default function Home() {
     <div className="row">
         <div className="col-md-12">
             <div className="d-flex justify-content-between align-items-center breaking-news bg-white">
-                <div className="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news"><span className="d-flex align-items-center">&nbsp;Thapar Sports News</span></div>
+                <div className="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news"><span className="d-flex align-items-left">Thapar Sports News</span></div>
                 <marquee className="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> <a href="#">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a> <span className="dot"></span> <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </a> <span className="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a>
                 </marquee>
             </div>
@@ -66,11 +66,11 @@ export default function Home() {
 <div className="container-fluid" id="Achievements">
        <section className="pt-5 pb-5">
     <div className="container-fluid">
-        <div className="row">
+        <div className="row text-center" >
             <div className="col-6">
                 <h3 className="mb-3">Achievements</h3>
             </div>
-            <div className="col-6 text-right">
+            <div className="col-6">
                 <a className="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
                     <i className="fa fa-arrow-left"></i>
                 </a>

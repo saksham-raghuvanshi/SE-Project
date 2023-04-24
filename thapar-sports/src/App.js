@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import Nav from "./components/Nav";
 import Home from './components/Home';
 import Aboutus from "./components/Aboutus";
@@ -7,11 +7,13 @@ import Facilities from './components/Facilities';
 import Faculty from './components/Faculty';
 import Achievements from './components/Achieve';
 import Footer from "./components/Footer";
+// import Login from "./components/Login";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+
 function App() {
 
  
@@ -40,6 +42,8 @@ function App() {
         </Route>
         <Route exact path="/achievements" element={<Achievements/>} >
         </Route>
+        {/* <Route exact path="/login" element={<Login/>} >
+        </Route> */}
 
        </Routes>
 
