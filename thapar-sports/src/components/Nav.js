@@ -22,7 +22,7 @@ const Nav = () =>{
 
       <li className="nav-item">
         <Link className="nav-link" to="/facilities">
-          Facilitics
+        Facilities
         </Link>
         </li>
         
