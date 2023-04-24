@@ -382,3 +382,22 @@ div #coach{
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+
+#facilities{
+margin-top: 5%;
+margin-left: 2%;
+margin-right: 2%;
+text-align: left;
+}
+
+#facheading{
+  text-align: left;
+  margin-top:4%;
+  margin-left: 3%;
+}
+
+.table{
+text-align: left;
+margin-top: 3%;
+}

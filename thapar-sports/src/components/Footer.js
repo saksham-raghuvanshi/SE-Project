@@ -4,7 +4,7 @@ import "./CSS/style.css"
 
 export default function Footer() {
   return (
-<body className="d-flex flex-column " id="footer">
+<body className="d-flex flex-column mt-5" id="footer">
 <div className="container-fluid bg-body-tertiary mt-auto ">
 <div className="container mt-5">
   <footer className="row">

@@ -1,6 +1,8 @@
 import React from 'react';
 import "./CSS/style.css";
 import coachi from "../img/coachi.jpg";
+import ach1 from "../img/ach1.webp";
+import coach1_1 from "../img/coach1_1.webp"
 // import ig1 from "../img/ig1.jpg";
 // import ig2 from "../img/ig2.jpg";
 // import ig3 from "../img/ig3.jpg";
@@ -11,13 +13,23 @@ import coachi from "../img/coachi.jpg";
 export default function Faculty() {
   return (
     <div>
+
+
+
+<div class="container-fluid" id="achieve">
+                <img src={coach1_1} alt="Snow" id="background"/>
+                    <div class="centered">Our Faculty</div>
+            </div>
+
     {/* <h1 className="display-2"><b>Our Coaches</b></h1> */}
 
 
-    <div className="jumbotron text-center">
+    {/* <div className="jumbotron text-center">
                 <div id="aboutus"><h1>Our Coaches</h1>
                 </div>
-                </div>
+                </div> */}
+
+
 
 <div className="container text-center" id="facultycont">
     <div className="row">

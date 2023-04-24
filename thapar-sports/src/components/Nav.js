@@ -20,15 +20,10 @@ const Nav = () =>{
         <Link className="nav-link" to="/about-us">About us</Link>
       </li>
 
-      <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <li className="nav-item">
+        <Link className="nav-link" to="/facilities">
           Facilitics
         </Link>
-        <ul className="dropdown-menu">
-          <li><Link className="dropdown-item" to="/">Cricket</Link></li>
-          <li><Link className="dropdown-item" to="/">Football</Link></li>
-          <li><Link className="dropdown-item" to="/">Basketball</Link></li>
-        </ul>
         </li>
         
         <li className="nav-item">
