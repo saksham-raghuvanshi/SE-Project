@@ -38,7 +38,6 @@ const Nav = () =>{
       <li className="nav-item">
         <Link className="nav-link" to="/events">Events</Link>
       </li>
-
       <li className="nav-item">
         <Link className="nav-link" data-toggle="modal" data-target="#modalLoginForm"><i className="fa-solid fa-user"></i></Link>
         {/* <Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link> */}

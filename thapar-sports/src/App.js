@@ -6,13 +6,16 @@ import Aboutus from "./components/Aboutus";
 import Facilities from './components/Facilities';
 import Faculty from './components/Faculty';
 import Achievements from './components/Achieve';
+import Profile from "./components/Profile";
+import Dashboard from "./components/dashboard";
 import Footer from "./components/Footer";
-// import Login from "./components/Login";
+
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
+
 
 function App() {
 
@@ -27,6 +30,12 @@ function App() {
   
     <div className="App">
 
+<Router>
+  <Routes>
+  <Route exact path="/dashboard" element={<Dashboard/>} >
+        </Route>
+  </Routes>
+</Router>
 
     <Router>
     <Nav/>
@@ -42,8 +51,10 @@ function App() {
         </Route>
         <Route exact path="/achievements" element={<Achievements/>} >
         </Route>
-        {/* <Route exact path="/login" element={<Login/>} >
-        </Route> */}
+        <Route exact path="/profile" element={<Profile/>} >
+        </Route>
+  
+
 
        </Routes>
 
