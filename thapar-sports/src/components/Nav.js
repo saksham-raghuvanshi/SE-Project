@@ -1,6 +1,7 @@
 import React from 'react';
 import "./CSS/style.css";
 import {Link} from 'react-router-dom'
+import app from '../firebase_setup/firebase';
 
 const Nav = () =>{
   return (
@@ -39,7 +40,12 @@ const Nav = () =>{
         <Link className="nav-link" to="/events">Events</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" data-toggle="modal" data-target="#modalLoginForm"><i className="fa-solid fa-user"></i></Link>
+        <Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link>
+        {/* <Link className="nav-link" data-toggle="modal" data-target="#modalLoginForm"><i className="fa-solid fa-user"></i></Link> */}
+</li>
+        {/* <li className="nav-item">
+        <button onClick={() => app.auth().signOut()}>Sign out</button>
+      </li>  */}
         {/* <Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link> */}
 
         {/* <div className="text-center">
@@ -50,7 +56,7 @@ const Nav = () =>{
 
         
 
-      </li>
+      
     </ul>
     
   </div>

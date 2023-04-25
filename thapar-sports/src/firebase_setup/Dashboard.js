@@ -1,12 +1,37 @@
-import React from 'react'
-import "./CSS/Dashboard.css"
+import { signOut } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "./firebase";
+import { useAuth } from "./auth";
+import "./Dashboard.css"
 import logo_tsms from "../img/logo_tsms.png"
 
+export default function Dashboard() {
+  const navigate = useNavigate();
+  const { user } = useAuth();
 
-export default function dashboard() {
+  const logout = async () => {
+    await signOut(auth);
+    navigate("/login");
+  };
+
+  if (!user) {
+    navigate("/login");
+  }
+
+  console.log("user-info", user);
+
   return (
     <div>
-       <div class="container-fuild">
+      {/* <button className="signout-btn" onClick={logout}>
+        Sign Out
+      </button>
+      <p>
+        Back to login? <Link to="/login">Click</Link>{" "}
+      </p> */}
+
+
+
+      <div class="container-fuild">
         <div class="topbar" id="topbar">
             <div class="logo">
                 <h2>Dashboard</h2>
@@ -64,7 +89,7 @@ export default function dashboard() {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" onClick={logout}>
                                 <i class="fa-solid fa-user"></i>
                                 <div>Logout</div>
                             </a>
@@ -312,8 +337,7 @@ export default function dashboard() {
         </div>
 
     </div>
+
     </div>
-    
-   
-  )
+  );
 }

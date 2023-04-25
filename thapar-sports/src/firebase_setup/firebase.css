@@ -1,0 +1,41 @@
+
+.login {
+    margin-top: 10%;
+    margin-left:10%;
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    width: 60%;
+  }
+  
+  .login input {
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #f5f5f5;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .register-btn {
+    display: block;
+    background-color: #05390c;
+    color: #fff;
+    border: none;
+    border-radius: "50px";
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .signout-btn {
+    display: block;
+    background-color: #05390c;
+    color: #fff;
+    border: none;
+    border-radius: "50px";
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
