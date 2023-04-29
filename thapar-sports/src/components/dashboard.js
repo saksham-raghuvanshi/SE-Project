@@ -58,7 +58,7 @@ export default function dashboard() {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/contact-us">
                                 <i class="fa-solid fa-phone"></i>
                                 <div>Contact Us</div>
                             </a>

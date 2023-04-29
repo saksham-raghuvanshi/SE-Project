@@ -23,6 +23,7 @@ import {
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Events from "./components/Events";
+import Contactus from "./components/Contactus";
 
 // import {db} from './Firebase/firebase-config'
 // import {collection, getDocs} from "firebase/firestore";
@@ -99,6 +100,8 @@ import Events from "./components/Events";
         <Route exact path="/login" element={<Login/>} >
         </Route>
         <Route exact path="/register" element={<Register/>} >
+        </Route>
+        <Route exact path="/contact-us" element={<Contactus/>} >
         </Route>
 
 

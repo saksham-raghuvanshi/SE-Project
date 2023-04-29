@@ -7,11 +7,45 @@ import Badminton from "../img/badminton.jpg";
 import Football from "../img/Football1.png";
 import Tennis from "../img/Tennis.jpg";
 import Cricket from "../img/batball.jpg";
+import "./CSS/style.css"
+import { Card, Button } from 'react-bootstrap';
 
 export default function Home() {
+  const coaches = [
+    {
+      name: 'Saksham',
+      image: coachi,
+      sport: 'Badminton',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero eu lorem rutrum aliquam. Nullam elementum orci sed nibh feugiat eleifend.'
+    },
+    {
+      name: 'Harshit',
+      image: coachi,
+      sport: 'Cricket',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero eu lorem rutrum aliquam. Nullam elementum orci sed nibh feugiat eleifend.'
+    },
+    {
+      name: 'Samarth',
+      image: coachi,
+      sport: 'Football',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero eu lorem rutrum aliquam. Nullam elementum orci sed nibh feugiat eleifend.'
+    },
+    {
+      name: 'Hitesh',
+      image: coachi,
+      sport: 'Basketball',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero eu lorem rutrum aliquam. Nullam elementum orci sed nibh feugiat eleifend.'
+    },
+    {
+      name: 'Anjali',
+      image: coachi,
+      sport: 'Swimming',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero eu lorem rutrum aliquam. Nullam elementum orci sed nibh feugiat eleifend.'
+    }
+  ];
   return (
  // Header 
-    <div style={{backgroundColor:"aliceblue"}}>
+    <div >
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
  <div className=" carousel-inner ">
    <div className="carousel-item active">
@@ -194,8 +228,7 @@ export default function Home() {
 
   
 
-                <div className='container-fluid text-center' id="Coaches">
-        <h2>Coach</h2>
+                
 
                 {/* <div class="container">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
@@ -252,7 +285,7 @@ export default function Home() {
 
 </div>*/}
             
-  <div className='row' id="coachs">
+  {/* <div className='row' id="coachs">
     <div className='col' >
     <div class="flip-card" >
   <div class="flip-card-inner">
@@ -328,13 +361,32 @@ export default function Home() {
   </div>
 </div>
     </div>
-    </div>          
-        
+</div>  */}        
+        <div className='container text-center'>
+        <h2>Coach</h2>
+    </div> 
+
+<div className="container my-5">
+      <div className="row">
+        {coaches.map((coach, index) => (
+          <div className="col my-3" key={index}>
+            <Card>
+              <Card.Img variant="top" src={coach.image} alt="coach" />
+              <Card.Body>
+                <Card.Title>{coach.name}</Card.Title>
+                <Card.Text>
+                  {coach.description}
+                </Card.Text>
+                <Button variant="primary">{coach.sport}</Button>
+              </Card.Body>
+            </Card>
+          </div>
+        ))}
+      </div>
     </div>
 
 
-
-    {/* Facilities */}
+    {/* Facilities
 
 
     <div className='container-fluid text-center' id="Facilities">
@@ -382,9 +434,194 @@ export default function Home() {
 
 
 
+    </div> */}
+
+
+    
+
+
+
+  
+<h2 class="container text-center" id="facilitiesh">OUR SPORTS PROGRAMS</h2>
+<p class="container text-center" id="facilitiesp">Tailored Programs for your Sporting Needs – Beginner, Intermediate and Professional Level</p>
+<div className="container" id="vercontainer">
+      <div className="row">
+        <div className="col-md-3">
+          <div
+            className="nav flex-column nav-pills"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <a
+              className="nav-link active"
+              id="v-pills-badminton-tab"
+              data-toggle="pill"
+              href="#v-pills-badminton"
+              role="tab"
+              aria-controls="v-pills-badminton"
+              aria-selected="true"
+            >
+              Badminton
+            </a>
+            <a
+              className="nav-link"
+              id="v-pills-football-tab"
+              data-toggle="pill"
+              href="#v-pills-football"
+              role="tab"
+              aria-controls="v-pills-football"
+              aria-selected="false"
+            >
+              FootBall
+            </a>
+            <a
+              className="nav-link"
+              id="v-pills-tennis-tab"
+              data-toggle="pill"
+              href="#v-pills-tennis"
+              role="tab"
+              aria-controls="v-pills-tennis"
+              aria-selected="false"
+            >
+              Tennis
+            </a>
+            <a
+              className="nav-link"
+              id="v-pills-basketball-tab"
+              data-toggle="pill"
+              href="#v-pills-basketball"
+              role="tab"
+              aria-controls="v-pills-basketball"
+              aria-selected="false"
+            >
+              Basketball
+            </a>
+            <a
+              className="nav-link"
+              id="v-pills-cricket-tab"
+              data-toggle="pill"
+              href="#v-pills-cricket"
+              role="tab"
+              aria-controls="v-pills-cricket"
+              aria-selected="false"
+            >
+              Cricket
+            </a>
+          </div>
+        </div>
+        <div className="col-md-9">
+          <div
+            className="tab-content"
+            id="v-pills-tabContent"
+          >
+            <div
+              className="tab-pane fade show active"
+              id="v-pills-badminton"
+              role="tabpanel"
+              aria-labelledby="v-pills-badminton-tab"
+            >
+              <div className="content" id="vercontent">
+                <img src={Badminton} alt="badminton" />
+                <p>The Sports School Badminton Academy with Chief Mentor Pullela Gopichand, strives to provide the best and unique training facilities and methods to our students to groom their willingness to play the sport into a full-fledged profession.</p>
+                <a href="/facilities" className="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+            <div
+              className="tab-pane fade"
+              id="v-pills-basketball"
+              role="tabpanel"
+              aria-labelledby="v-pills-basketball-tab"
+            >
+              <div className="content" id="vercontent">
+                <img src={Tennis} alt="basketball" />
+                <p>The Sports School Basketball Academy with Key5 Coaching strives to empower students with knowledge and skills required to excel in the game while fostering positive attitude and competence.</p>
+                <a href="/facilities" className="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          
+
+            <div
+              className="tab-pane fade"
+              id="v-pills-football"
+              role="tabpanel"
+              aria-labelledby="v-pills-football-tab"
+            >
+              <div className="content" id="vercontent">
+                <img src={Football} alt="Football" />
+                <p>The Sports School Cricket Academy with Centre for Cricketing Excellence (CCE), mentored by Robin Uthappa, offers personalised cricket coaching with the latest in cricket technology and year-round international exposure.</p>
+                <a href="/facilities" className="btn btn-primary">Learn More</a>
+              </div>
+
+              
+            </div>
+            <div
+              className="tab-pane fade"
+              id="v-pills-tennis"
+              role="tabpanel"
+              aria-labelledby="v-pills-tennis-tab"
+            >
+              <div className="content" id="vercontent">
+                <img src={Tennis} alt="Tennis" />
+                <p>The Sports School Cricket Academy with Centre for Cricketing Excellence (CCE), mentored by Robin Uthappa, offers personalised cricket coaching with the latest in cricket technology and year-round international exposure.</p>
+                <a href="/facilities" className="btn btn-primary">Learn More</a>
+              </div>
+
+            
+
+              
+            </div>
+            <div
+              className="tab-pane fade"
+              id="v-pills-cricket"
+              role="tabpanel"
+              aria-labelledby="v-pills-cricket-tab"
+            >
+              <div className="content" id="vercontent">
+                <img src={Cricket} alt="Cricket" />
+                <p>The Sports School Cricket Academy with Centre for Cricketing Excellence (CCE), mentored by Robin Uthappa, offers personalised cricket coaching with the latest in cricket technology and year-round international exposure.</p>
+                <a href="/facilities" className="btn btn-primary">Learn More</a>
+              </div>
+
+            
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 
+    <section class="bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="text-center text-md-start">
+          <h3>For More Information</h3>
+          <p>Please leave your contact details, we'll get back to you.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required/>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required/>
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control" id="phone" placeholder="Your Phone" required/>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="message" rows="3" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
