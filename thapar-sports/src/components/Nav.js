@@ -1,9 +1,21 @@
 import React from 'react';
+
 import "./CSS/style.css";
 import {Link} from 'react-router-dom'
+// import { signOut } from "firebase/auth";
+// import { auth } from "./Firebase/firebase-config";
+// const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
+function Nav(){
 
-const Nav = () =>{
+  // const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  // const signUserOut = () => {
+  //   signOut(auth).then(() => {
+  //     localStorage.clear();
+  //     setIsAuth(false);
+  //     window.location.pathname = "/login";
+  //   });
+  // };
   return (
     <div>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -40,7 +52,12 @@ const Nav = () =>{
         <Link className="nav-link" to="/events">Events</Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link>
+      <Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link>
+        {/* {!isAuth ? (<Link className="nav-link" to="/login"><i className="fa-solid fa-user"></i></Link>) : (
+          <>
+          <button onClick={signUserOut}>Log out</button>
+          </>
+        ) } */}
         {/* <Link className="nav-link" data-toggle="modal" data-target="#modalLoginForm"><i className="fa-solid fa-user"></i></Link> */}
 </li>
         {/* <li className="nav-item">
