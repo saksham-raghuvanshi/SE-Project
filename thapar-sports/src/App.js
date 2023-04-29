@@ -16,7 +16,7 @@ import Footer from "./components/Footer";
 // import { signOut } from "firebase/auth";
 // import { auth } from "./Firebase/firebase-config";
 import {
-  BrowserRouter as Router,Navigate,
+  BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";

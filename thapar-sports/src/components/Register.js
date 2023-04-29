@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 import "./CSS/Login.css"
@@ -71,7 +72,7 @@ function Register() {
       <button type="submit">Register</button>
       {error && <p className="error">{error}</p>}
       <p>
-        Already have an account? <a href="/login">Login</a>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </form>
   );

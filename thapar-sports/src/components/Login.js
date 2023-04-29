@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./CSS/Login.css"
+import { Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -56,7 +57,7 @@ function Login() {
       <button type="submit">Login</button>
       {error && <p className="error">{error}</p>}
       <p>
-        Create a new account <a href="/register">Register</a>
+        Create a new account <Link to="/register">Register</Link>
       </p>
     </form>
   );
