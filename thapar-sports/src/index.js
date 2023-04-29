@@ -4,14 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { UserContextProvider } from "./firebase_setup/UserContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <UserContextProvider>
+  <React.StrictMode>
   <App />
-</UserContextProvider>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./CSS/style.css";
 import {Link} from 'react-router-dom'
-import app from '../firebase_setup/firebase';
+
 
 const Nav = () =>{
   return (

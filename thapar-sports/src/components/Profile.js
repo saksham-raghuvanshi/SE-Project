@@ -3,6 +3,8 @@ import "./CSS/Profile.css"
 import profile from "../img/profile.jpg"
 
 
+ 
+
 export default function Profile() {
     return (
         <div className="container rounded bg-white mt-5 mb-5">

@@ -1,0 +1,15 @@
+{
+  "name": "thapar-sports",
+  "version": "1.0.0",
+  "description": "Stay updated with latest sports events and announcements, book your swimming entries, and issue sports equipment all in one place",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/saksham-raghuvanshi/SE-Project"
+  },
+  "author": "Saksham Raghuvanshi",
+  "license": "ISC"
+}
