@@ -114,9 +114,10 @@ import Topbar from "./components/Topbar";
 
     
 </Routes>
-    </Router>
-    <Details/>
+<Details/>
     <Footer/>
+    </Router>
+    
     
     
 

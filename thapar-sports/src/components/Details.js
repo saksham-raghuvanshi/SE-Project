@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Details() {
   return (
-    <div>
+    <div className='mt-5'>
       <section class="details py-5">
   <div class="container">
     <div class="row">
