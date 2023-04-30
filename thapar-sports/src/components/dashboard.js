@@ -7,7 +7,7 @@ export default function dashboard() {
   return (
     <div>
        <div class="container-fuild">
-        <div class="topbar" id="topbar">
+        <div class="topbar" id="topbar2">
             <div class="logo">
                 <h2>Dashboard</h2>
             </div>
@@ -128,7 +128,7 @@ export default function dashboard() {
                                 <canvas id="lineChart"></canvas>
                             </div>
                         </div>
-                        <div class="chart doughnut-chart">
+                        {/* <div class="chart doughnut-chart">
                             <h2><b>Swimming Pool Entry</b></h2>
                             <hr/>
                             <div class="col border-right">
@@ -178,7 +178,66 @@ export default function dashboard() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+
+
+<div class="chart doughnut-chart">
+    <h2><b>Swimming Pool Entry</b></h2>
+    <hr/>
+    <div class="row">
+        <div class="col-md-6 border-right">
+            <div class="p-3 py-5">
+                <h4 class="text-right mb-3"><b>Please fill the form</b></h4>
+                <div class="form-group">
+                    <label class="labels">Name</label>
+                    <input type="text" class="form-control" placeholder="First name" />
+                </div>
+                <div class="form-group">
+                    <label class="labels">Last Name</label>
+                    <input type="text" class="form-control"  placeholder="Last Name"/>
+                </div>
+                <div class="form-group">
+                    <label class="labels">Thapar Roll No.</label>
+                    <input type="text" class="form-control" placeholder="Roll No." disabled/>
+                </div>
+                <div class="form-group">
+                    <label class="labels">Hostel Residing Currently</label>
+                    <input type="text" class="form-control" placeholder="Hostel" disabled/>
+                </div>
+                <div class="form-group">
+                    <label class="labels">Hostel Room No</label>
+                    <input type="text" class="form-control" placeholder="Room No." disabled/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-3 py-5">
+                {/* <div class="form-group">
+                    <label class="labels">AGE</label>
+                    <input type="text" class="form-control" placeholder="e.g. 21" />
+                </div> */}
+                <div class="form-group">
+                    <label class="labels">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter your Email" />
+                </div>
+                <div class="form-group">
+                    <label class="labels">Mobile Number</label>
+                    <input type="text" class="form-control" placeholder="Enter phone number" />
+                </div>
+                <div class="form-group">
+                    <label class="labels">Stream of Education</label>
+                    <input type="text" class="form-control" placeholder="Education" />
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12 text-center">
+                        <button class="btn btn-primary profile-button" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </div>
@@ -312,6 +371,10 @@ export default function dashboard() {
         </div>
 
     </div>
+
+
+
+    
     </div>
     
    

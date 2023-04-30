@@ -26,6 +26,7 @@ import Events from "./components/Events";
 import Contactus from "./components/Contactus";
 import Details from "./components/Details";
 import Topbar from "./components/Topbar";
+//import Dashboard2 from "./components/Dashboard2";
 
 // import {db} from './Firebase/firebase-config'
 // import {collection, getDocs} from "firebase/firestore";
@@ -49,43 +50,27 @@ import Topbar from "./components/Topbar";
 //   },[])
 
   
-  return (
-
-    
-
-    
-  
+  return (  
     <div className="App">
       
-
+{/* 
 <Router>
-  <Routes>
-  <Route exact path="/dashboard" element={<Dashboard/>} >
-        </Route>
-  </Routes>
-</Router>
-
-<Router>
-{/* <Routes>
-          
-</Router>
-<Router> */}
-
-
 <Routes>
-
-
-
-
+<Route exact path="/dashboard" element={<Dashboard/>} >
+</Route>            
 </Routes>
-
+</Router>
+<Router>
+<Routes>       
+</Router>
+<Router>
+<Routes>
+</Routes>
 </Router>
 
     <Router>
     <Topbar/>
     <Nav/>
-    
-
        <Routes>
        <Route exact path="/" element={<Home/>} >
         </Route>
@@ -106,18 +91,195 @@ import Topbar from "./components/Topbar";
         <Route exact path="/register" element={<Register/>} >
         </Route>
         <Route exact path="/contact-us" element={<Contactus/>} >
-        </Route>
-
-
-        
-      
-
-    
+        </Route>    
 </Routes>
 <Details/>
     <Footer/>
     </Router>
+     */}
+
+
+
+<Router>
+      <Routes>
+        <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact
+          path="/"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Home/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        />
+
+<Route
+          exact path="/about-us"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Aboutus/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        />
+
+
+<Route
+          exact path="/facilities"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Facilities/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        />   
+
+<Route
+          exact path="/faculty"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Faculty/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        />   
+
+
+<Route
+          exact path="/achievements"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Achievements/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        />                       
+
+<Route
+          exact path="/events"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Events/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        /> 
+
+
+
+<Route
+          exact path="/profile"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Profile/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        /> 
+      
+
+      <Route
+          exact path="/login"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Login/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        /> 
     
+    <Route
+          exact path="/register"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Register/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        /> 
+
+       <Route
+          exact path="/contact-us"
+          element={
+            <>
+            <Topbar/>
+            <Nav/>
+              <main>
+                <Routes>
+                <Route exact path="/" element={<Contactus/>} />
+                </Routes>
+              </main>
+              <Details/>
+              <Footer />
+            </>
+          }
+        />           
+        
+      </Routes>
+    </Router>
     
     
 
