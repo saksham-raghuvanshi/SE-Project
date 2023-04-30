@@ -24,6 +24,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Events from "./components/Events";
 import Contactus from "./components/Contactus";
+import Details from "./components/Details";
 
 // import {db} from './Firebase/firebase-config'
 // import {collection, getDocs} from "firebase/firestore";
@@ -111,13 +112,7 @@ import Contactus from "./components/Contactus";
     
 </Routes>
     </Router>
-    
-  
-    <div>
-      <p>
-        
-      </p>
-    </div>
+    <Details/>
     <Footer/>
     
     

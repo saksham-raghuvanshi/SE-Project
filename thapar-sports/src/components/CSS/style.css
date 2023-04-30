@@ -518,3 +518,129 @@ div #vercontent .btn-primary:hover {
 #facilitiesh{
   margin-top: 5%;
 }
+
+
+.welcome {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.welcome h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.col {
+  width: calc(25% - 10px);
+}
+
+.col img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+#aboutbtn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #f2f2f2;
+  color: #131313;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  border-color: red;
+  border-radius: 10px;
+}
+
+#aboutbtn:hover {
+  background-color: #333;
+}
+
+
+
+
+#achievements {
+  background-color: #f8f9fa;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#achievements h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 60px;
+}
+
+#achcard {
+  border: none;
+  width: 500px;
+  height: auto;
+}
+
+#achcard .card-img-top {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+#ach-card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+#achbtn{
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #f2f2f2;
+  color: #131313;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  border-color: red;
+  border-radius: 10px;
+}
+
+#achbtn-primary:hover, #achbtn-primary:focus {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+@media (max-width: 767px) {
+  #achievements h2 {
+    font-size: 30px;
+  }
+
+  #ach-card-img-top {
+    height: 300px;
+  }
+
+  .btn-primary {
+    padding: 15px 30px;
+  }
+}
