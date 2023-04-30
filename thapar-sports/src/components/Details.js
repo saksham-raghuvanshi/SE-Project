@@ -3,7 +3,7 @@ import React from 'react'
 export default function Details() {
   return (
     <div>
-      <section class="bg-light py-5">
+      <section class="details py-5">
   <div class="container">
     <div class="row">
       <div class="col-md-6 d-flex align-items-center">

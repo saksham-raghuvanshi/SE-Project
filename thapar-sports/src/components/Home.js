@@ -4,10 +4,15 @@ import acvh from "../img/acvh1.jpg"
 import photo_2 from '../photo_2.webp'
 import photo_5 from '../photo_5.webp'
 import coachi from "../img/coachi.jpg";
-import Badminton from "../img/badminton.jpg";
-import Football from "../img/Football1.png";
-import Tennis from "../img/Tennis.jpg";
-import Cricket from "../img/batball.jpg";
+import Badminton from "../img/badminton.webp";
+import Football from "../img/football.webp";
+import Tennis from "../img/tennis.webp";
+import Basketball from "../img/basketball.webp";
+import Cricket from "../img/cricket.webp";
+import Tennis1 from "../img/tennis1.jpg";
+import tabbletennis from "../img/tabbletennis.jpg";
+import ball from "../img/ball.jpg";
+import gym from "../img/gym.jpg";
 import "./CSS/style.css"
 import { Card, Button } from 'react-bootstrap';
 
@@ -87,17 +92,17 @@ export default function Home() {
     <h2 class="text-uppercase">Welcome to Thapar Sports</h2>
     <div class="row">
       <div class="col">
-        <img src={Badminton} alt="Image 1"/>
+        <img src={gym} alt="Image 1"/>
       </div>
       <div class="col">
-        <img src={Cricket} alt="Image 2"/>
+        <img src={ball} alt="Image 2"/>
       </div>
       <div class="col">
-        <img src={Tennis} alt="Image 3"/>
+        <img src={Tennis1} alt="Image 3"/>
 
       </div>
       <div class="col">
-        <img src={Football} alt="Image 4"/>
+        <img src={tabbletennis} alt="Image 4"/>
       </div>
     </div>
     <p>Stay up-to-date with sports events, book swimming entries, and get sports equipment all in one place. Join us and never miss a game or a chance to stay active.</p>
@@ -680,7 +685,7 @@ export default function Home() {
               aria-labelledby="v-pills-basketball-tab"
             >
               <div className="content" id="vercontent">
-                <img src={Tennis} alt="basketball" />
+                <img src={Basketball} alt="basketball " />
                 <p>The Sports School Basketball Academy with Key5 Coaching strives to empower students with knowledge and skills required to excel in the game while fostering positive attitude and competence.</p>
                 <a href="/facilities" className="btn btn-primary">Learn More</a>
               </div>

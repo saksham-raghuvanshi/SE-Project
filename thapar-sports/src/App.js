@@ -25,6 +25,7 @@ import Register from "./components/Register";
 import Events from "./components/Events";
 import Contactus from "./components/Contactus";
 import Details from "./components/Details";
+import Topbar from "./components/Topbar";
 
 // import {db} from './Firebase/firebase-config'
 // import {collection, getDocs} from "firebase/firestore";
@@ -55,6 +56,7 @@ import Details from "./components/Details";
     
   
     <div className="App">
+      
 
 <Router>
   <Routes>
@@ -80,8 +82,9 @@ import Details from "./components/Details";
 </Router>
 
     <Router>
-    
+    <Topbar/>
     <Nav/>
+    
 
        <Routes>
        <Route exact path="/" element={<Home/>} >
