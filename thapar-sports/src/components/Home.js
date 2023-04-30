@@ -84,7 +84,7 @@ export default function Home() {
 
             <section class="welcome">
   <div class="container text-center">
-    <h2>Welcome to Thapar Sports</h2>
+    <h2 class="text-uppercase">Welcome to Thapar Sports</h2>
     <div class="row">
       <div class="col">
         <img src={Badminton} alt="Image 1"/>
@@ -123,7 +123,7 @@ export default function Home() {
 <div id="achievements" class="container-fluid py-5">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="text-center text-uppercase mb-5">Our Achievements</h2>
+      <h2 class="text-center text-uppercase mb-5">Thapar University Student Achievements</h2>
     </div>
   </div>
   <div class="row">
@@ -508,8 +508,8 @@ export default function Home() {
 </div>
     </div>
 </div>  */}        
-        <div className='container text-center'>
-        <h2>Coach</h2>
+        <div className='container text-center mt-5' id="coachdiv">
+        <h2 className='text-uppercase'>Coach</h2>
     </div> 
 
 <div className="container my-5">
