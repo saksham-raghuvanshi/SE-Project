@@ -66,49 +66,9 @@ div #img {
 }
 
 
-div #sidebar {
-    position: fixed;
-    margin-top:3%;
-    top: 60px;
-    width: 260px;
-    height: calc(100% - 60px);
-    background: rgb(102, 0, 0);
-    overflow-x: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    z-index: 2;
-}
 
-div #sidebar ul {
-    margin-top: 20px;
-}
 
-div #sidebar ul li {
-    width: 100%;
-    list-style: none;
-}
 
-div #sidebar ul li:hover {
-    background: #fff;
-}
-
-div #sidebar ul li:hover a {
-    color: #299B63;
-}
-
-div #sidebar ul li a {
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
-
-div #sidebar ul li a i {
-    min-width: 60px;
-    font-size: 24px;
-    text-align: center;
-}
 
 
 /* main */
@@ -284,3 +244,254 @@ a:link{
 }
 
 
+/* Add some styles to the form */
+#form1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Add some styles to the input fields */
+label, input, select {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Add some styles to the submit button */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+
+/* #row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #sidebar1 {
+    width: 100%;
+    max-width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #sidebar1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #sidebar1 li {
+    margin-bottom: 15px;
+  }
+  
+  #sidebar1 a {
+    display: flex;
+    align-items: center;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  #sidebar1 a:hover {
+    color: #000;
+  }
+  
+  #sidebar1 i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  #sidebar1 div {
+    font-size: 1rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #row1 {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    #sidebar {
+      margin-bottom: 20px;
+    }
+  } */
+
+/* 
+  div #sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: rgb(102, 0, 0);
+    overflow-x: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}  
+
+div #sidebar ul {
+    margin-top: 20px;
+}
+
+div #sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+
+div #sidebar ul li:hover {
+    background: #fff;
+}
+
+div #sidebar ul li:hover a {
+    color: #299B63;
+}
+
+div #sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+div #sidebar ul li a i {
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+} */
+
+/* Sidebar styles */
+div #sidebar {
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background: rgb(102, 0, 0);
+    overflow-x: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+div #sidebar ul {
+    margin-top: 20px;
+}
+
+div #sidebar ul li {
+    width: 100%;
+    list-style: none;
+}
+
+div #sidebar ul li:hover {
+    background: #fff;
+}
+
+div #sidebar ul li:hover a {
+    color: #299B63;
+}
+
+div #sidebar ul li a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+div #sidebar ul li a i {
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Menu toggle styles */
+div #sidebar .menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+div #sidebar .menu-toggle i {
+    font-size: 24px;
+    color: #252424;
+}
+
+@media only screen and (max-width: 767px) {
+    /* Hide the sidebar by default on small screens */
+    div #sidebar {
+        display: none;
+    }
+
+    /* Show the menu toggle on small screens */
+    div #sidebar .menu-toggle {
+        display: block;
+    }
+
+    /* Add margin to the page content when the sidebar is hidden */
+    div #content {
+        margin-left: 0;
+    }
+
+    /* Collapse the sidebar menu on small screens */
+    div #sidebar.collapse {
+        display: block;
+        height: 0;
+        width: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 2;
+        overflow-y: auto;
+        background: rgb(102, 0, 0);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: height 0.3s ease-in-out;
+    }
+
+    div #sidebar.collapse ul li {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    div #sidebar.collapse ul li a {
+        display: block;
+        height: auto;
+    }
+
+    div #sidebar.collapse.show {
+        height: calc(100% - 60px);
+    }
+}

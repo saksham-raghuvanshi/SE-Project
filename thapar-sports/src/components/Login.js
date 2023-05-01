@@ -5,7 +5,7 @@ import { signIn } from "../services/auth";
 
 function Login() {
   const [email, setEmail] = useState("");
-  const [rollNo,setRollNo] = useState();
+  const [rollNo,setRollNo] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -26,14 +26,14 @@ function Login() {
     setShowPassword(!showPassword);
   };
 
-  const handleLogin = async(event) => {
+  const handleLogin = async (event) => {
     event.preventDefault();
     // Your login logic here
-    if (email === "" || password === "") {
-      setError("Please enter email and password");
+    if (email === "" || password === "" || rollNo === "") {
+      setError("Please enter email, roll number and password");
     } else {
       setError("");
-      const result = await signIn(email,rollNo,password);
+      const result = await signIn(email, rollNo, password);
       console.log(result);
     }
   };
@@ -47,9 +47,9 @@ function Login() {
         value={email}
         onChange={handleEmailChange}
       />
-      <br>
-        <h5>OR sign in with your Roll No</h5>
-      </br>
+      <br />
+      <h5>OR sign in with your Roll No</h5>
+      <br />
       <input
         type="number"
         placeholder="TIET Roll No"

@@ -1,9 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react';
 import "./CSS/Dashboard.css"
 import logo_tsms from "../img/logo_tsms.png"
 
 
-export default function dashboard() {
+
+class dashboard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          equipment: "",
+          studentName: "",
+          isEquipmentIssued: false,
+        };
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
+      }
+    
+      handleInputChange(event) {
+        const target = event.target;
+        const value = target.type === "checkbox" ? target.checked : target.value;
+        const name = target.name;
+        this.setState({
+          [name]: value,
+        });
+      }
+    
+      handleFormSubmit(event) {
+        event.preventDefault();
+        if (this.state.equipment === "") {
+          alert("Please select an equipment to issue");
+          return;
+        }
+        if (this.state.isEquipmentIssued) {
+          alert("You have already issued an equipment");
+          return;
+        }
+        this.setState({
+          isEquipmentIssued: true,
+        });
+        alert("Equipment issued successfully!");
+      }
+
+      render(){
   return (
     <div>
        <div class="container-fuild">
@@ -24,54 +62,62 @@ export default function dashboard() {
             </div>
         </div>
         <div class="row">
-            <div class="col-sm">
-                <div class="sidebar" id="sidebar">
-                    <ul>
-                        <li>
-                            <a href="/dashboard">
-                                <i class="fas fa-th-large"></i>
-                                <div>Dashboard</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/">
-                                <i class="fa-solid fa-house"></i>
-                                <div>Home</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-chalkboard-teacher"></i>
-                                <div>Activities</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/faculty">
-                                <i class="fa-solid fa-user-tie"></i>
-                                <div>Coaches</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/profile">
-                                <i class="fas fa-cog"></i>
-                                <div>Profile</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/contact-us">
-                                <i class="fa-solid fa-phone"></i>
-                                <div>Contact Us</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa-solid fa-user"></i>
-                                <div>Logout</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="col-sm">
+        <div class="sidebar" id="sidebar">
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
+            <ul>
+                <li>
+                    <a href="/dashboard">
+                        <i class="fas fa-th-large"></i>
+                        <div>Dashboard</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/">
+                        <i class="fa-solid fa-house"></i>
+                        <div>Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <div>Activities</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/faculty">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <div>Coaches</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/profile">
+                        <i class="fas fa-cog"></i>
+                        <div>Profile</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact-us">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>Contact Us</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <div>Logout</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+            
             <div class="col">
                 <div class="main" id="main">
                     <div class="cards" id="cards">
@@ -126,7 +172,40 @@ export default function dashboard() {
                             <hr/>
                             <div>
                                 <canvas id="lineChart"></canvas>
-                            </div>
+                                <div>
+        <h2>Equipment Issue Form</h2>
+        <form onSubmit={this.handleFormSubmit} id="form1">
+          <div>
+            <label htmlFor="equipment">Select an equipment to issue:</label>
+            <select
+              id="equipment"
+              name="equipment"
+              value={this.state.equipment}
+              onChange={this.handleInputChange}
+            >
+              <option value="">Select an equipment</option>
+              <option value="Football">Football</option>
+              <option value="Bat">Bat</option>
+              <option value="Ball">Ball</option>
+              <option value="Basketball">Basketball</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor="studentName">Enter your name:</label>
+            <input
+              type="text"
+              id="studentName"
+              name="studentName"
+              value={this.state.studentName}
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div>
+            <button type="submit">Issue Equipment</button>
+          </div>
+        </form>
+      </div>
+                                       </div>
                         </div>
                         {/* <div class="chart doughnut-chart">
                             <h2><b>Swimming Pool Entry</b></h2>
@@ -380,3 +459,6 @@ export default function dashboard() {
    
   )
 }
+}
+
+export default dashboard

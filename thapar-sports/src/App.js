@@ -1,7 +1,5 @@
-//import logo from './logo.svg';
-// import './App.css';
-//import { useSatate, useEffect } from "react";
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Nav from "./components/Nav";
 import Home from './components/Home';
 import Aboutus from "./components/Aboutus";
@@ -12,9 +10,7 @@ import Profile from "./components/Profile";
 import Dashboard from "./components/dashboard";
 
 import Footer from "./components/Footer";
-// import { useState } from "react";
-// import { signOut } from "firebase/auth";
-// import { auth } from "./Firebase/firebase-config";
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -26,28 +22,19 @@ import Events from "./components/Events";
 import Contactus from "./components/Contactus";
 import Details from "./components/Details";
 import Topbar from "./components/Topbar";
-//import Dashboard2 from "./components/Dashboard2";
 
-// import {db} from './Firebase/firebase-config'
-// import {collection, getDocs} from "firebase/firestore";
+function App() {
+  const [users, setUsers] = useState([]);
 
-
-
- 
- function App(){
-
-//   const [users, setUsers]= useSatate([]);
-//   const userCollectionRef = collection(db,"users")
-//   useEffect(() =>{
-    
-//     const getUsers = async() => {
-//       const data = await getDocs(userCollectionRef);
-//       console.log(data);
-
-//     }
-
-//     getUsers()
-//   },[])
+  useEffect(() => {
+    axios.get('/api/v1/users')
+      .then(response => {
+        setUsers(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
 
   
   return (  
