@@ -1,15 +1,31 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { signUp } from '../services/auth';
 
 import { useState } from "react";
 import "./CSS/Login.css"
 
 function Register() {
+  const [name,setName] = useState();
   const [email, setEmail] = useState("");
+  const [rollNo,setRollNo] = useState();
+  const [phoneNumber,setPhoneNumber] = useState();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  }
+
+  const handleRollNoChange = e => {
+    setRollNo(e.target.value);
+  }
+
+  const handlePhoneNumberChange = e => {
+    setPhoneNumber(e.target.value);
+  }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -27,7 +43,7 @@ function Register() {
     setShowPassword(!showPassword);
   };
 
-  const handleRegister = (event) => {
+  const handleRegister = async(event) => {
     event.preventDefault();
     // Your registration logic here
     if (email === "" || password === "" || confirmPassword === "") {
@@ -36,7 +52,8 @@ function Register() {
       setError("Passwords do not match");
     } else {
       setError("");
-      // Registration logic goes here...
+      const result = await signUp(name,email,rollNo,phoneNumber,password,confirmPassword);
+      console.log(result);
     }
   };
 
@@ -44,10 +61,28 @@ function Register() {
     <form className="login-form" onSubmit={handleRegister}>
       <h3>Register</h3>
       <input
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={handleNameChange}
+      />
+      <input
         type="email"
         placeholder="Email..."
         value={email}
         onChange={handleEmailChange}
+      />
+      <input
+        type="number"
+        placeholder="Phone Number"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+      />
+      <input
+        type="number"
+        placeholder="TIET Roll No"
+        value={rollNo}
+        onChange={handleRollNoChange}
       />
       <input
         type={showPassword ? "text" : "password"}
