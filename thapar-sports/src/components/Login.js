@@ -1,9 +1,11 @@
 import { useState } from "react";
 import "./CSS/Login.css"
 import { Link } from "react-router-dom";
+import { signIn } from "../services/auth";
 
 function Login() {
   const [email, setEmail] = useState("");
+  const [rollNo,setRollNo] = useState();
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
@@ -11,6 +13,10 @@ function Login() {
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
+
+  const handleRollNoChange = (event) => {
+    setRollNo(event.target.value);
+  }
 
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
@@ -20,14 +26,15 @@ function Login() {
     setShowPassword(!showPassword);
   };
 
-  const handleLogin = (event) => {
+  const handleLogin = async(event) => {
     event.preventDefault();
     // Your login logic here
     if (email === "" || password === "") {
       setError("Please enter email and password");
     } else {
       setError("");
-      // Login logic goes here...
+      const result = await signIn(email,rollNo,password);
+      console.log(result);
     }
   };
 
@@ -39,6 +46,15 @@ function Login() {
         placeholder="Email..."
         value={email}
         onChange={handleEmailChange}
+      />
+      <br>
+        <h5>OR sign in with your Roll No</h5>
+      </br>
+      <input
+        type="number"
+        placeholder="TIET Roll No"
+        value={rollNo}
+        onChange={handleRollNoChange}
       />
       <input
         type={showPassword ? "text" : "password"}
