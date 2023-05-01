@@ -8,7 +8,7 @@ import Faculty from './components/Faculty';
 import Achievements from './components/Achieve';
 import Profile from "./components/Profile";
 import Dashboard from "./components/dashboard";
-
+import Dashboard2 from "./components/dashboard2";
 import Footer from "./components/Footer";
 
 import {
@@ -90,6 +90,7 @@ function App() {
 <Router>
       <Routes>
         <Route exact path="/dashboard" element={<Dashboard />} />
+        <Route exact path="/dashboard2" element={<Dashboard2/>} />
         <Route exact
           path="/"
           element={

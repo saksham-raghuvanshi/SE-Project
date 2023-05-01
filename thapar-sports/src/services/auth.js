@@ -19,6 +19,9 @@ export async function signUp(name,email,rollNo,phoneNumber,password,confirmPassw
 
 export async function signIn(email,rollNo,password) {
     const result = await instance.post("/users/signin",{email,rollNo,password});
+    if(result.data.token) {
+        localStorage.setItem("TIETjwt",JSON.stringify(result.data.token));
+    }
     return result.data;
 }
 

@@ -6,7 +6,7 @@ const connection = async() => {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         };
-        await mongoose.connect("mongodb+srv://harshit_127:harshitbh@cluster0.jtpfbpc.mongodb.net/?retryWrites=true&w=majority",connectionParams);
+        await mongoose.connect("mongodb+srv://ashmit05:carpediem@thaparuniversity.vn7czcu.mongodb.net/?retryWrites=true&w=majority",connectionParams);
         console.log("Connected to database");
     } catch(err) {
         console.log("Could not connect to the database");

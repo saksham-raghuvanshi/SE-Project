@@ -39,10 +39,10 @@ class User {
         const {email,rollNo,password} = req.body;
         try {
             let user;
-            if(!email) {
-                user = await UserModel.findOne({rollNo : rollNo});
-            } else if(!rollNo) {
-                user = await UserModel.findOne({email : email}); 
+            if(email) {
+                user = await UserModel.findOne({email : email});
+            } else if(rollNo) {
+                user = await UserModel.findOne({rollNo : rollNo}); 
             }
             if(!user) {
                 return res.send({error : "User does not exist!"});

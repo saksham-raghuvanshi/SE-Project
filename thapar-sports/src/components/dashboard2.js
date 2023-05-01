@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 import "./CSS/Dashboard.css"
 import logo_tsms from "../img/logo_tsms.png"
-import { AuthContext } from "./AuthContext";
 
 
 
 class dashboard extends React.Component {
 
-
+    
+    
+      handleChange = (e) => {
+        const totalEquipment = parseInt(e.target.value);
+        this.setState({ totalEquipment });
+        localStorage.setItem("totalEquipment", totalEquipment);
+      };
+ 
     
     constructor(props) {
         super(props);
@@ -15,11 +21,46 @@ class dashboard extends React.Component {
           equipment: "",
           studentName: "",
           isEquipmentIssued: false,
+          totalEquipment: localStorage.getItem("totalEquipment") || 0,
+          totalFootball: localStorage.getItem("totalFootball") || 0,
+          totalBasketball: localStorage.getItem("totalbasketball") || 0,
+          totalTennis: localStorage.getItem("totalTennis") || 0,
+          totalBadminton: localStorage.getItem("totalBadminton") || 0
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
+
+   
       }
-    
+      handleChange = (e) => {
+        const totalEquipment = parseInt(e.target.value);
+        this.setState({ totalEquipment });
+        localStorage.setItem("totalEquipment", totalEquipment);
+      }
+      handleChange1 = (e) => {
+        const totalFootball = parseInt(e.target.value);
+        this.setState({ totalFootball });
+        localStorage.setItem("totalFootball", totalFootball);
+      }
+      
+      handleChange2 = (e) => {
+        const totalBasketball = parseInt(e.target.value);
+        this.setState({ totalBasketball });
+        localStorage.setItem("totalBasketball", totalBasketball);
+      }
+
+      handleChange3 = (e) => {
+        const totalBadminton = parseInt(e.target.value);
+        this.setState({ totalBadminton });
+        localStorage.setItem("totalBadminton", totalBadminton);
+      }
+      handleChange4 = (e) => {
+        const totalTennis = parseInt(e.target.value);
+        this.setState({ totalTennis });
+        localStorage.setItem("totalTennis", totalTennis);
+      };
+
+
       handleInputChange(event) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
@@ -129,7 +170,7 @@ class dashboard extends React.Component {
                         <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                             <div class="card" id="card">
                                 <div class="card-content">
-                                    <div class="number">{localStorage.getItem("totalEquipment") || 0} </div>
+                                    <div class="number">{this.state.totalEquipment}</div>
                                     <div class="card-name">Total Items</div>
                                     <br/>
                                 </div>
@@ -173,44 +214,38 @@ class dashboard extends React.Component {
                     </div>
                     <div class="charts">
                         <div class="chart">
-                            <h2><b>Book Items</b></h2>
+                            <h2><b>Items</b></h2>
                             <hr/>
-                            <div>
-                                <canvas id="lineChart"></canvas>
+                        
                                 <div>
-        <h2>Equipment Issue Form</h2>
-        <form onSubmit={this.handleFormSubmit} id="form1">
-          <div>
-            <label htmlFor="equipment">Select an equipment to issue:</label>
-            <select
-              id="equipment"
-              name="equipment"
-              value={this.state.equipment}
-              onChange={this.handleInputChange}
-            >
-              <option value="">Select an equipment</option>
-              <option value="Football">Football</option>
-              <option value="Bat">Bat</option>
-              <option value="Ball">Ball</option>
-              <option value="Basketball">Basketball</option>
-            </select>
-          </div>
-          <div>
-            <label htmlFor="studentName">Enter your name:</label>
-            <input
-              type="text"
-              id="studentName"
-              name="studentName"
-              value={this.state.studentName}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <button type="submit">Issue Equipment</button>
-          </div>
-        </form>
+                                <div>
+        <label htmlFor="total-equipment">Enter the total number of equipment available:</label>
+        <input type="number" id="total-equipment" onChange={this.handleChange} />
+        <p>The total number of equipment available is: {this.state.totalEquipment}</p>
+        <br/>
+
+        <p>Equipment Availables: </p>
+        <label htmlFor="total-football">Enter the total number of Football available:</label>
+        <input type="number" id="total-football" onChange={this.handleChange1} />
+        <p>The total number of Football available is: {this.state.totalFootball}</p>
+
+        <label htmlFor="total-basketball">Enter the total number of Basketball available:</label>
+        <input type="number" id="total-basketball" onChange={this.handleChange2} />
+        <p>The total number of Basketball available is: {this.state.totalBasketball}</p>
+
+        <label htmlFor="total-tennis">Enter the total number of Football available:</label>
+        <input type="number" id="total-tennis" onChange={this.handleChange4} />
+        <p>The total number of Tennis available is: {this.state.totalTennis}</p>
+
+        <label htmlFor="total-tennis">Enter the total number of Football available:</label>
+        <input type="number" id="total-tennis" onChange={this.handleChange3} />
+        <p>The total number of Badminton available is: {this.state.totalBadminton}</p>
+
       </div>
-                                       </div>
+        <h2>Equipment Issue List</h2>
+        
+      </div>
+                                       
                         </div>
                         {/* <div class="chart doughnut-chart">
                             <h2><b>Swimming Pool Entry</b></h2>
@@ -266,7 +301,7 @@ class dashboard extends React.Component {
 
 
 <div class="chart doughnut-chart">
-    <h2><b>Swimming Pool Entry</b></h2>
+    {/* <h2><b>Swimming Pool Entry</b></h2>
     <hr/>
     <div class="row">
         <div class="col-md-6 border-right">
@@ -296,10 +331,7 @@ class dashboard extends React.Component {
         </div>
         <div class="col-md-6">
             <div class="p-3 py-5">
-                {/* <div class="form-group">
-                    <label class="labels">AGE</label>
-                    <input type="text" class="form-control" placeholder="e.g. 21" />
-                </div> */}
+                
                 <div class="form-group">
                     <label class="labels">Email</label>
                     <input type="email" class="form-control" placeholder="Enter your Email" />
@@ -319,7 +351,7 @@ class dashboard extends React.Component {
                 </div>
             </div>
         </div>
-    </div>
+    </div> */}
 </div>
 
                     </div>
@@ -352,27 +384,29 @@ class dashboard extends React.Component {
                                 <tr>
                                     <th scope="row">1</th>
                                     <td>Football</td>
-                                    <td>{localStorage.getItem("totalFootball")}</td>
+                                    <td>{this.state.totalFootball}</td>
 
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
                                     <td>Basketball</td>
-                                    <td>{localStorage.getItem("totalBasketball")}</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Tennis</td>
-                                    <td>{localStorage.getItem("totalTennis")}</td>
+                                    <td>{this.state.totalBasketball}</td>
 
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
                                     <td>Badminton</td>
-                                    <td>{localStorage.getItem("totalBadminton")}</td>
+                                    <td>{this.state.totalBadminton}</td>
 
                                 </tr>
+
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Tennis</td>
+                                    <td>{this.state.totalTennis}</td>
+
+                                </tr>
+
                             </tbody>
                         </table>
 
